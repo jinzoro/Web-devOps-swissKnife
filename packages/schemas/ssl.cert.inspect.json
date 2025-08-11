@@ -1,0 +1,6 @@
+{
+  "key": "ssl.cert.inspect",
+  "cmd": "openssl x509 -in {{cert}} -noout -text",
+  "read_only": true,
+  "schema": { "properties": { "cert": { "pattern": "^[a-zA-Z0-9._/-]{1,120}$" } }, "required": ["cert"] }
+}

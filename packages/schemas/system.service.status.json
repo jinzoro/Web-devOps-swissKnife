@@ -1,0 +1,13 @@
+{
+  "key": "system.service.status",
+  "cmd": "systemctl status {{service}} --no-pager",
+  "read_only": true,
+  "timeout_s": 20,
+  "schema": {
+    "properties": {
+      "service": { "pattern": "^[a-zA-Z0-9@._-]{1,128}$" }
+    },
+    "required": ["service"],
+    "additionalProperties": false
+  }
+}
