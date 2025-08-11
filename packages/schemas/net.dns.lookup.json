@@ -1,0 +1,12 @@
+{
+  "key": "net.dns.lookup",
+  "cmd": "dig +nocmd {{name}} {{type}} +noall +answer",
+  "read_only": true,
+  "schema": {
+    "properties": {
+      "name": { "pattern": "^[a-zA-Z0-9.-]{1,253}$" },
+      "type": { "enum": ["A","AAAA","CNAME","MX","TXT","NS","SOA","CAA","SRV"] }
+    },
+    "required": ["name","type"], "additionalProperties": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "key": "kube.get.pods",
+  "cmd": "kubectl get pods -n {{namespace}}",
+  "read_only": true,
+  "timeout_s": 60,
+  "schema": {
+    "properties": {
+      "namespace": { "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$" }
+    },
+    "required": ["namespace"],
+    "additionalProperties": false
+  }
+}

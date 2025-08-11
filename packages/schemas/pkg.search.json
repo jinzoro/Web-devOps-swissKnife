@@ -1,0 +1,12 @@
+{
+  "key": "pkg.search",
+  "cmd": "{{manager}} search {{query}}",
+  "read_only": true,
+  "schema": {
+    "properties": {
+      "manager": { "enum": ["dnf","apt","zypper","pacman"] },
+      "query": { "pattern": "^[a-zA-Z0-9.+_-]{1,64}$" }
+    },
+    "required": ["manager","query"], "additionalProperties": false
+  }
+}
